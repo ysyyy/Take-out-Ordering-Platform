@@ -1,0 +1,34 @@
+/* pages/alltheorder/alltheorder.wxss */
+.background{
+    background-color: rgb(255, 245,225)
+  }
+  .sum{
+    width: 750rpx
+  }
+  .order-info{
+    background: white;
+    margin-top:10px;
+  }
+  
+  .order-info-title{
+    font-size:14px;
+    color: rgb(100,100,100);
+    padding: 12px;
+    border-bottom: 1px #E3E3E3 solid
+  }
+  
+  .text-order{
+    font-size:13px;
+    margin-top:30px;
+    border:1px solid rgb(243, 220, 8);
+    border-radius: 25px;
+  }
+  
+  .rightDisplay{
+    position: relative;
+    align-items:center;
+     display: flex;
+    flex-direction: column
+  }
+  
+  

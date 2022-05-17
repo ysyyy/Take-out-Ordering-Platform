@@ -1,0 +1,14 @@
+/* pages/assitant/assitant.wxss */
+.imagestyle{   
+    display:flex;
+    justify-content: center;
+}
+.imagestyle image{
+    width:500rpx;
+    height:500rpx;
+}
+.textstyle{
+    display:flex;
+    justify-content: center;
+    font-size:30rpx;
+}

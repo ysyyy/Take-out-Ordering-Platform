@@ -1,0 +1,30 @@
+/* pages/check/check.wxss */
+.background{
+  background-color: rgb(255, 245,225)
+}
+.sum{
+  width: 750rpx
+}
+.order-info{
+  background: white;
+  margin-top:10px;
+}
+
+.order-info-title{
+  font-size:14px;
+  color: rgb(100,100,100);
+  padding: 12px;
+  border-bottom: 1px #E3E3E3 solid
+}
+
+
+
+.rightDisplay{
+  position: relative;
+  align-items:center;
+   display: flex;
+  flex-direction: column
+}
+
+
+

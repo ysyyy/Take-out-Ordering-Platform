@@ -1,0 +1,5 @@
+<!--pages/assitant/assitant.wxml-->
+<view class='imagestyle'>
+    <image src='/images/public/public.jpg' class='in-image' show-menu-by-longpress="1"></image>
+</view>
+<text class='textstyle'>请扫码进入此公众号</text>
