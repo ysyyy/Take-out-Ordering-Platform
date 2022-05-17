@@ -1,0 +1,16 @@
+<view>
+<!-- 顶部轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiper-class'>
+    <block wx:for="{{imgUrls}}" wx:key="unique" class='block-class'>
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+    <!-- 操作按钮 -->
+  <view class='btn-bar'>
+    <view class='btn-block' bindtap='golist'>
+      <view class="btn_op1">开始订餐</view>
+    </view>
+  </view>
+</view>
