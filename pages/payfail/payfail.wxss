@@ -1,0 +1,41 @@
+/* pages/payfail/payfail.js.wxss */
+.info{
+    position:relative;
+    top:50%;
+    width:200px;
+    margin:100px auto 0;
+  }
+  .info icon{
+    display: block;
+    text-align:Center;
+  }
+  .info text{
+    display:block;
+    margin-top:20px;
+    font-size:25px;
+    color:red;
+    font-weight:bolder;
+    text-align:Center;
+  } 
+  .info.img{
+    margin: 50px auto;
+  }
+  .info.img image{
+    width:200px;
+    height:200px;
+    border:1px solid #eee;
+  }
+  
+  .return-button{
+    width: 50%;
+    margin-top: 100rpx;
+    background-color: red;
+    color: #FFF;
+  }
+  
+  .check-button{
+    width: 50%;
+    margin-top: 80rpx;
+    background-color: gainsboro;
+    color: black;
+  }

@@ -1,0 +1,133 @@
+.advertise-swiper{
+  background:#eee;
+  width:750rpx;
+  height:30vh;
+}
+.advertiseImage-class{
+  width:750rpx;
+  height:30vh;
+}
+.advertise{
+  width: 750rpx;
+  height:30vh;
+}
+.menu-class{
+  background-color: #eee;
+  height: 100vh;
+}
+.description-class{
+  color: #6C6C6C;
+  background-color: rgb(247, 231, 231);
+  display: flex;
+  flex-direction: column;
+}
+.line{
+  background-color: rgb(188, 188, 197);
+  height: 4rpx;
+  width: 100%;
+}
+.list-left-menu{
+  width:160rpx;
+  font-size:28rpx;
+  position: absolute;
+  left:0px;
+  z-index: 10;
+}
+.list-menu-name{
+  text-align: center;
+  margin-top:14rpx;
+}
+.list-left-menu-box-selected{
+  padding:10rpx;
+  height:72rpx;
+  color: rgb(243, 220, 8);
+  border-left:3px solid rgb(243, 220, 8);
+  background:white;
+}
+.list-left-menu-box-unselect{
+  padding:10rpx;
+  border-bottom:1px solid #E3E3E3;
+  height:72rpx;
+  color: #6C6C6C;
+  background:#F9F9F9;
+}
+.list-menu-name{
+  text-align: center;
+  margin-top:14rpx;
+}
+.list-tab{
+  margin-left:170rpx;
+  font-size:25rpx;
+  background:#F3F4F6;
+  color:rgb(107, 107,107);
+  padding:2px;
+  width: 100%;
+  height:263px;
+  display: flex;
+  flex-direction: column
+}
+.menu-image-class{
+  height: 250px
+}
+.image-class{
+  width: 75%;
+  height: 75%;
+  margin-left: 0;
+  margin-top:0px
+}
+.text-class{
+  font-weight: bold;
+  font-size:15px;
+}
+.text-intelligence{
+  font-size:12px;
+  margin-top:30px;
+  border:1px solid rgb(243, 220, 8);
+  border-radius: 25px;
+}
+.text-order{
+  font-size:13px;
+  margin-top:30px;
+  border:1px solid rgb(243, 220, 8);
+  border-radius: 25px;
+}
+.food-numb{
+  height: 40rpx;
+  width: 130rpx;
+  display: flex;
+  box-sizing: border-box;
+  margin-top:-30rpx; 
+  margin-left: 350rpx;
+  line-height: 40rpx;
+  font-size: 25rpx;
+}
+.food-numb .add,.food-numb .remove{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 40rpx;
+  text-align: center; 
+}
+.food-numb .add{
+  font-size: 35rpx;
+  line-height: 37rpx;
+  font-weight: 700;
+  background: rgb(243, 220, 8);
+  margin-left: 15rpx;
+}
+.food-numb .remove{
+  margin-right: 15rpx;
+  line-height: 28rpx;
+  font-size: 60rpx;
+  font-weight: 500;
+  box-sizing: border-box;
+  border: 2rpx;
+  border-style: solid; 
+  border-color: #B0B0B0;
+  color: #B0B0B0;
+}
+.text-numb{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}

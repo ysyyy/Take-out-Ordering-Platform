@@ -1,0 +1,99 @@
+<view class='advertise'>
+  <swiper class='advertise-swiper' current='0'>
+    <swiper-item>
+      <image src='{{MenuList[23].imagePath}}'       class='advertiseImage-class'></image>
+      <text>{{MenuList[23].name}}</text>
+    </swiper-item>  
+    <swiper-item>
+      <image src='{{MenuList[10].imagePath }}' class='advertiseImage-class'></image>
+      <text>{{MenuList[10].name}}</text>
+    </swiper-item>
+    <swiper-item>
+      <image src='{{MenuList[12].imagePath}}' class='advertiseImage-class'></image>
+      <text>{{MenuList[12].name}}</text>
+    </swiper-item>
+    <swiper-item>
+      <image src='{{MenuList[22].imagePath}}' class='advertiseImage-class'></image>
+      <text>{{MenuList[22].name}}</text>
+    </swiper-item>
+  </swiper>
+</view>
+
+
+<view class='menu-class'>
+  <view class="line" style='background-color:rgb(188, 188, 197)'></view>
+
+  <view class="list-left-menu">
+    <view wx:for="{{listData}}" wx:key="unique" class="{{index==activeIndex?'list-left-menu-box-selected':'list-left-menu-box-unselect'}}" data-index="{{index}}" bindtap='selectMenu'>
+      <view class="list-menu-name">{{item.name}}</view>
+    </view>
+    <!-- <contact-button class="text-intelligence" session-from="weapp">智能客服</contact-button> -->
+    <button class="text-intelligence" bindtap='goassistant'>智能客服</button>
+    <button class="text-order" bindtap="goalltheorder">订单</button>
+  </view>
+
+  <scroll-view scroll-y="true" scroll-into-view="{{toView}}" enable-back-to-top="false" scroll-top="{{scrollTop}}" style='height:1200rpx;' bindscroll="scroll">
+    <view class='menuContent' id='a{{index}}' wx:for="{{MenuList}}" wx:key="unique"> 
+      <view class='list-tab'>
+        <image src='{{item.imagePath}}' class='image-class' bindtap='choose' data-index="{{index}}"></image>
+        <view class='text-numb'>
+          <view>
+            <text class='text-class'>{{item.name}}</text>
+            <text style='font-size:14px;margin-left:10px'>￥{{item.price}}</text>
+          </view>
+          <view class="food-numb">
+            <view class='remove' bindtap="removeFromCart" data-index="{{index}}" hidden="{{item.numb==0}}">-</view>
+            <text class='text' hidden="{{item.numb==0}}">{{item.numb}}</text>
+            <view class='add' data-index="{{index}}" bindtap="addToCart">+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view style='height:80px'></view>
+
+    <!-- 底部操作栏 -->
+ <view class="bottom-bar" style='width:100%;margin-left: 85px;z-index:1001;margin-top:80px;'>
+      <view class="gouwuche">
+        <view style='padding:5px;display:flex'>
+          <icon class="iconfont icon-gouwuche gouwuche-icon {{cost!=0?'activity-color':'' }}" bindtap="showCartList">
+          <span class="number-msg" wx:if="{{cartList.length!=0}}">{{num}}</span>
+          </icon>
+          <view class='gouwuche-price' wx:if="{{cost==0}}">购物车是空的</view>
+          <view class='gouwuche-price' style='color:white;font-size:18px;margin-left:20px;' wx:if="{{cost!=0}}">¥ {{cost}}.00</view>
+        </view>
+    </view>
+    <view class="btn"  style="margin-left:50px;">
+        <text class="{{cost==0?'blank':'' }}" bindtap='goPay' decode = "{{true}}">选好了&nbsp;></text>
+    </view>
+  </view>
+<!-- 购物车 -->
+  <view class="drawer_screen" bindtap="showCartList" data-statu="close" wx:if="{{showCart}}"></view>
+  <view class="cartlist-float" wx:if="{{showCart}}">
+  <view style='background:#F0F0F0;height:30px'>
+    <label class='label-cart-bar'>
+      <label style='padding:5px'>已选商品</label>
+    </label>
+    <label class='icon-clear' bindtap='clearCart'>
+      <icon class="iconfont icon-lajitong"></icon>
+      <label class="label-clear">清空购物车</label>
+    </label>
+  </view>
+  <scroll-view scroll-y="true" class="{{cartList.length>5?'cart-scroll-list':''}}">
+
+    <view class='cart-list-box' wx:for="{{cartList}}" wx:key="unique" style='border-bottom:1px #E3E3E3 solid'>
+      <view class='list-info'>
+        <view>{{item.name}}</view>
+      </view>
+      <view style='width:50%;padding:10px;'>
+        <view style='float:right'>
+          <label class='activity-color'>¥ {{item.totalCos}}.00</label>
+          <icon class="iconfont icon-jianhao icon-li-circle" data-index="{{index}}" bindtap="decNumber"></icon>
+          {{item.numb}}
+          <icon class="iconfont icon-jiahao activity-color font20" data-index="{{index}}" bindtap="addNumber"></icon>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+  </scroll-view>
+  </view>

@@ -1,0 +1,57 @@
+<view class='container'>
+  <image class='about-banner' src="/images/menu/danbaofan/galidanbaofan.jpg"></image>
+  <text class='about-word'>一份用心的咖喱</text>
+  <text class='about-word'>一份美味的风味咖喱</text>
+  <view style='margin-top:40rpx;'>
+      <text class='about-price'>￥25</text>
+      <view class="food-numb">
+        <view class='remove' data-index="{{index}}" bindtap="mainDec" hidden="{{thisNum==0}}">-</view>
+      <text class='text' hidden="{{thisNum==0}}">{{thisNum}}</text>
+      <view class='add' data-index="{{index}}" bindtap="addToCart">+</view>
+    </view>
+  </view>
+</view>
+<!-- 底部操作栏 -->
+ <view class="bottom-bar" style='width:100%;z-index:1001;position:absolute;'>
+      <view class="gouwuche">
+        <view style='padding:5px;display:flex'>
+          <icon class="iconfont icon-gouwuche gouwuche-icon {{cost!=0?'activity-color':'' }}" bindtap="showCartList">
+          <span class="number-msg" wx:if="{{cartList.length!=0}}">{{num}}</span>
+          </icon>
+          <view class='gouwuche-price' wx:if="{{cost==0}}">购物车是空的</view>
+          <view class='gouwuche-price' style='color:white;font-size:18px;margin-left:20px;' wx:if="{{cost!=0}}">¥ {{cost}}.00</view>
+        </view>
+    </view>
+    <view class="btn" style="margin-left:90px;">
+        <text bindtap='card' decode = "{{true}}">选好了&nbsp;></text>
+    </view>
+  </view>
+<!-- 购物车 -->
+  <view class="drawer_screen" bindtap="showCartList" data-statu="close" wx:if="{{showCart}}"></view>
+  <view class="cartlist-float" wx:if="{{showCart}}">
+  <view style='background:#F0F0F0;height:30px'>
+    <label class='label-cart-bar'>
+      <label style='padding:5px'>已选商品</label>
+    </label>
+    <label class='icon-clear' bindtap='clearCart'>
+      <icon class="iconfont icon-lajitong"></icon>
+      <label class="label-clear">清空购物车</label>
+    </label>
+  </view>
+  <scroll-view scroll-y="true" class="{{cartList.length>5?'cart-scroll-list':''}}">
+
+    <view class='cart-list-box' wx:for="{{cartList}}" wx:key="unique" style='border-bottom:1px #E3E3E3 solid'>
+      <view class='list-info'>
+        <view>{{item.name}}</view>
+      </view>
+      <view style='width:50%;padding:10px;'>
+        <view style='float:right'>
+          <label class='activity-color'>¥ {{item.totalCos}}.00</label>
+          <icon class="iconfont icon-jianhao icon-li-circle" data-index="{{index}}" bindtap="decNumber"></icon>
+          {{item.numb}}
+          <icon class="iconfont icon-jiahao activity-color font20" data-index="{{index}}" bindtap="addNumber"></icon>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

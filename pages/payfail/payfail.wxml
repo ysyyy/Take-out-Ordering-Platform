@@ -1,0 +1,10 @@
+<!--pages/payfail/payfail.js.wxml-->
+<view class="contaner" hidden='{{contanerhidden==1}}'>
+    <view class="info">
+    <icon type="cancel" size="80" color="red"/>
+    <text>支付失败！</text>
+  </view>
+  <view>
+    <button class='return-button' bindtap='return'>返回</button>
+  </view>
+</view>

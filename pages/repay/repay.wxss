@@ -1,0 +1,181 @@
+/* pages/pay/pay.wxss */
+.address-class{
+  background:rgb(255, 255, 255);
+  width:750rpx;
+  height:7vh;
+}
+.address-detail{
+  display: flex
+}
+.time-class{
+  background: rgb(250,250,250);
+  width: 750rpx;
+  height: 3.5vh;
+  display: flex
+}
+.radio-group{
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.9)
+}
+.time-radio{
+  width: 750rpx;
+  height: 96px;
+}
+.choose-getWay-radio{
+  width: 750rpx;
+  height: 48px;
+}
+.line{
+  background: rgb(250,250,250);
+  width: 750rpx;
+  height: 1.5vh
+}
+.sum{
+  width: 750rpx
+}
+.pay-way{
+  font-weight: bold;
+  font-size:12px;
+}
+.bottom-bar{
+    display:flex;
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height:80px;
+    line-height:80px;
+    background:rgb(53, 50, 50);
+    box-shadow: 0 -5px 10px #ccc;
+}
+.bottom-bar.hidden{
+  display:none;
+}
+.bottom-bar.view{
+    flex-grow: 1;
+}
+.bottom-bar .count{
+    padding-left:20px;
+}
+.bottom-bar .num{
+    margin-right:20px;
+    font-size:18px;
+    font-weight:bolder;
+    color:rgb(243, 220, 8);
+}
+.bottom-bar .btn{
+    margin-top: 20px;
+    margin-left:30px;
+    color:rgb(243, 220, 8);
+    line-height:40px;
+    font-size:16px;
+}
+.food-numb{
+  height: 40rpx;
+  width: 130rpx;
+  display: flex;
+  justify-content: flex-end;
+  line-height: 100rpx;
+  font-size: 25rpx;
+}
+
+.bg_layer{
+  position: fixed; 
+  left: 0; 
+  top: 0; 
+  bottom: 0; 
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+}
+
+
+.btn_pay{
+  margin: 100rpx auto; width: 600rpx; height: 100rpx; line-height: 100rpx; border-radius: 100rpx;
+  background-color: #d3a95a; color: #fff; font-size: 36rpx; text-align: center; 
+}
+/* 支付密码css start */
+.bg_layer{
+  position: fixed; left: 0; top: 0; bottom: 0; right: 0;
+  background-color: rgba(0, 0, 0, 0.6); z-index: 9998;
+}
+.input_main{
+    position: fixed; 
+    left: 0; 
+    bottom: 500rpx; 
+    width: 100%; 
+    height: 300rpx;
+    background-color: #fff; 
+    z-index: 9999;
+}
+.input_title{
+    width: 100%; height: 90rpx; line-height: 90rpx; text-align: center; 
+    font-size: 32rpx; border-bottom: 1rpx solid #e2e2e2;
+}
+.input_back{
+    position: absolute; left: 0; top: 0;
+    width: 80rpx; height: 90rpx; display: flex; justify-content: center; align-items: center;
+}
+.input_success{
+  position: absolute; right: 0; top: 0;
+  width: 80rpx; height: 90rpx; display: flex; justify-content: center; align-items: center;
+}
+.input_back text{
+  width: 20rpx;
+  height: 20rpx;
+  background-color: white;
+  border: 1rpx solid #aaa;
+  border-width: 5rpx 0 0 5rpx;
+  transform: rotate(-45deg);
+}
+.input_success text{
+  width: 20rpx;
+  height: 20rpx;
+  background-color: white;
+  border: 1rpx solid #aaa;
+  border-width: 5rpx 0 0 5rpx;
+  transform: rotate(-90deg);
+}
+
+.input_tip{  margin: 30rpx; font-size: 24rpx; color: #888; }
+
+/* 密码掩码模拟 */
+.input_row{
+  width: 690rpx; margin: 0 auto; height: 98rpx; position: relative;
+  display: flex; align-items: center; border: 1rpx solid #e2e2e2; border-radius: 20rpx;
+}
+.input_row .pwd_item{
+  flex: 1; display: flex; align-items: center; justify-content: center; 
+  height: 100%; border-right: 1rpx solid #e2e2e2; position: relative;
+}
+.pwd_item:nth-last-of-type(1) { border-right: 0; } 
+.pwd_item text { 
+  width: 30rpx; height: 30rpx; border-radius: 30rpx; background-color: #555;
+}
+
+
+.forget_pwd{ 
+  float: right; margin: 30rpx; width: 100rpx; text-align: right; font-size: 24rpx; color: #ff7800;
+}
+
+/* 文本输入框位置: 设置到左边隐藏 */
+.input_control { 
+  position: relative; left: -300rpx; bottom: 0; width: 100rpx; height: 100rpx;
+}
+.rightDisplay{
+  position: relative;
+  align-items:center;
+   display: flex;
+  flex-direction: column
+}
+.order-info{
+  background: white;
+  margin-top:10px;
+}
+.order-info-title{
+  font-size:14px;
+  color: rgb(100,100,100);
+  padding: 12px;
+  border-bottom: 1px #E3E3E3 solid
+}

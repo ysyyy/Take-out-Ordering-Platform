@@ -1,0 +1,28 @@
+/* pages/sanrentaocan/sanrentaocan.wxss */
+.columnChoose{
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom:80px;
+}
+.slide{
+  width:100%;
+  height: 240px;
+  background-color: #fff;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+}
+.theSwiper{
+  margin-top:30rpx;
+  width:70vh;
+  height:60vh;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

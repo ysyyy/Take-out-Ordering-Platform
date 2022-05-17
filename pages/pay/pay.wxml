@@ -1,0 +1,110 @@
+<!--pages/pay/pay.wxml-->
+<view>
+<scroll-view scroll-y="true">
+<view class='address-class' >
+  <text style='font-weight:bold;font-size:14px;color:rgb(75, 75, 75);margin-left:20rpx'>家常饭馆</text>
+  <view class='address-detail'>
+    <text style='font-size:10px;margin-left:20rpx'>湖北省武汉市洪山区珞喻路1037号华中科技大学</text>
+    <text style='font-size:10px;margin-left:20rpx'>韵苑学生宿舍24栋624</text>
+  </view>
+</view>
+
+<view class='time-class'>
+  <text style='font-size:14px;color:rgb(100,100,100);margin-left:20rpx'>请确定取餐时间</text>
+</view>
+
+<view class='time-radio'>
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{timeToGet}}">
+      <radio value="{{item.time}}" checked="{{item.checked}}"/>{{item.time}}
+    </label>
+  </radio-group>
+</view>
+
+<view class='time-class'>
+  <text style='font-size:14px;color:rgb(100,100,100);margin-left:20rpx'>请选择就餐方式</text>
+</view>
+
+<view class='choose-getWay-radio'>
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{wayToGet}}">
+      <radio value="{{item.way}}" checked="{{item.checked}}"/>{{item.way}}
+    </label>
+  </radio-group>
+</view>
+
+<view class='line'>
+</view>
+
+<view class='sum'>
+<view class='order-info'>
+    <view class='order-info-title'>订单详情</view>
+    <view class='cart-list-box' wx:for="{{cartList}}" wx:key="unique" style='border-bottom:1px #E3E3E3 solid'>
+      <view class='list-info'>
+        <view>{{item.name}}</view>
+      </view>
+      <view style='width:50%;padding:10px;'>
+        <view class='rightDisplay'>
+          <view style='color:#A3A3A3'>x {{item.numb}}</view>
+          <view>¥ {{item.totalCos}}.00</view>
+        </view>
+      </view>
+    </view>
+</view>
+
+<view class='line'>
+</view>
+
+<view class='pay-way'> 
+  <radio style='margin-left:20rpx'>微信支付</radio>
+</view>
+
+<view class='line'>
+</view>
+
+<view>
+  <view class='fapiao'>
+    <radio style='margin-left:20rpx;font-size:12px'>发票</radio>
+  </view>
+  <text style='margin-left:20px;font-size:11px;color:rgb(190,190,190)'>如需发票，请在微信支付成功提示消息中申请，我们将为您提供纸质发票</text>
+</view>
+
+<view style='height:100px'></view>
+
+<view class="bottom-bar">
+   <view class="count">
+      <text style='font-size:15px;color:rgb(243, 220, 8);'>共<text class="num">{{num}} 件</text></text>   
+      <text style='font-size:15px;color:rgb(243, 220, 8);'>合计 <text class="num">{{cost}} 元</text></text>
+   </view>
+   <view class="btn"  bindtap='pay' style='margin-left:70px;' >
+      <text decode = "{{true}}">去支付&nbsp;></text>
+   </view>
+</view>
+
+<!-- 密码输入框 -->
+<view hidden='{{!showPayPwdInput==true}}' class='kuang'>
+    <view class='bg_layer'></view>
+    <view class='input_main'>
+      <view class='input_title'>
+        <view class='input_back' catchtap='hidePayLayerFail'><text></text></view>
+        <text>输入支付密码</text>
+        <view class='input_success' catchtap='hidePayLayer'><text></text></view>
+      </view>
+      <view class='input_row' catchtap='getFocus'>
+        <view class='pwd_item' wx:for='{{6}}' wx:key='item' wx:for-index='i'>
+          <text wx:if='{{pwdVal.length>i}}'></text>
+        </view>
+      </view>
+      <input class='input_control' password type='number' focus='{{payFocus}}' bindinput='inputPwd' maxlength='6'/>
+    </view>
+</view>
+
+</view>
+
+</scroll-view>
+</view>
+
+
+
+
+
