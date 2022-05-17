@@ -27,3 +27,8 @@ order info and history orders:
 
 ![image](https://user-images.githubusercontent.com/32272220/168741052-d21f1d19-0d3f-4347-99b0-25bb7db4b984.png)
 ![image](https://user-images.githubusercontent.com/32272220/168736110-1dba9247-6ac4-4cd2-bfad-483273f7c955.png)
+
+
+
+customer service on Wechat's public account to recommend dishes based on key words:
+![image](https://user-images.githubusercontent.com/32272220/168742697-1dd8ccc8-c2d9-42fa-b736-adf11b71258c.png)
